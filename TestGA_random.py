@@ -118,7 +118,7 @@ def EV(el_vehicles, data, diesel_kWh_on_100km, petrol_kWh_on_100km, gpl_kWh_on_1
     else:
         overall_costs=216*el_transport+46.025
 #    print(colored(overall_costs, 'magenta'))
-    costsEV=overall_costs*i/(1-(1+i)**(-lifetime_EVinfrastr))
+    costsEV=overall_costs*i/(1-(2+i)**(-lifetime_EVinfrastr))
 #    print(colored(costsEV, 'magenta'))
     
     return nam, values_var, costsEV
@@ -126,9 +126,9 @@ def EV(el_vehicles, data, diesel_kWh_on_100km, petrol_kWh_on_100km, gpl_kWh_on_1
 
 #------------------------------------INPUT DATA--------------------------------
 
-data = {"EnergyPLAN folder": r"C:\Users\MPrina\ZipEnergyPLAN161",
-        "Input file": r"C:\Users\MPrina\TRUSTPV\ITALY\input_folder\IT_2030_ANSI.txt",
-        "Output folder": r"C:\Users\MPrina\TRUSTPV\ITALY\input_folder",
+data = {"EnergyPLAN folder": r"C:\Users\jaket\github\novascotia-wind-grid\notebook\EPLANoptML\ZipEnergyPLAN163",
+        "Input file": r"C:\Users\jaket\github\novascotia-wind-grid\notebook\EPLANoptML\input_folder\input_ANSI.txt",
+        "Output folder": r"C:\Users\jaket\github\novascotia-wind-grid\notebook\EPLANoptML\input_folder",
         "Number of process": 1,
         "Genetic algorithm": {"Size of population": 4,#200
                                 "Number of generations": 1},#50
@@ -248,7 +248,8 @@ def f(individual):
         # collection[name_ind] = dic #new_node
     
 #------------------------------------------------------------------------------
-    Costs = dic['TOTAL ANNUAL COSTS']+ Costs_en_eff_resid+ costsEV+ costs_gg# + dic['PP Electr.']*45-dic['PP Electr.']*12.24 - dic['Export Electr.']*35+ Costs_en_eff_resid + costs_gg+ costsEV# + dic['Import Electr.']*200 - dic['Import Payment'] 
+    Costs = dic['TOTAL ANNUAL COSTS']+ Costs_en_eff_resid+ costsEV
+            #+ costs_gg# + dic['PP Electr.']*45-dic['PP Electr.']*12.24 - dic['Export Electr.']*35+ Costs_en_eff_resid + costs_gg+ costsEV# + dic['Import Electr.']*200 - dic['Import Payment']
 
     CO2 = dic['CO2-emission (total)'] +15.7*0.056*1/3+ 0.5*0.557*1/3 + 22.8*0.056*1/3# +dic['CO2-emission (total)']*0.170-dic['PP Electr.']*0.353999716#+ dic['Import Electr.']*0.170 # CO2 [kt]
     

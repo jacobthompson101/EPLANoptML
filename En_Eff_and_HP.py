@@ -25,7 +25,7 @@ def func_EF_costs(max_res, av_eff):
     y=list(df['Specific cost (Euro per annual kWh saved)'])
     x=list(df['Energy saving (%, cumulative)']*max_res/100)
 #    print(x)
-    f1 = interp1d(x, y, kind='nearest')
+    f1 = interp1d(x, y, kind='nearest', fill_value="extrapolate")
     y_tot=[]
     y_cum=[]
     for a in range(len(x)):
@@ -36,7 +36,7 @@ def func_EF_costs(max_res, av_eff):
             y_tot.append(y[a]*(x[a]-x[a-1]))
             y_cum.append(y_cum[-1]+y_tot[-1])
     x_mod=list(df['Energy saving (%, cumulative)']*max_res/100*av_eff)
-    f1 = interp1d(x_mod, y_cum, kind='linear')
+    f1 = interp1d(x_mod, y_cum, kind='linear', fill_value="extrapolate")
     return f1#, x_mod, y_cum
 
 '''inputfile, out_folder, energyPLAN=general input EPLANopt

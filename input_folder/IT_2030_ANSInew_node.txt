@@ -7,7 +7,7 @@ MW
 MonetaryUnit=
 EUR
 Input_el_demand_Twh=
-290.6506248665
+262
 Input_El_demand_elec_heating_share=
 0
 Input_El_demand_cooling_share=
@@ -15,15 +15,15 @@ Input_El_demand_cooling_share=
 input_dh_demand_TWh=
 0
 input_RES1_capacity=
-67000
+30000
 input_RES2_capacity=
-44000
+39000
 input_RES1_factor=
 0.1265
 input_RES2_factor=
 0
 input_RES3_capacity=
-163000
+139000
 input_RES3_factor=
 -0.19
 input_RES4_capacity=
@@ -111,7 +111,7 @@ const.txt
 input_transport_TWh=
 10.1899955118434
 input_transport_TWh_V2G=
-111.67038883269538
+27.917597208173845
 Filnavn_transport=
 IT Transport demand.txt
 Filnavn_transport_V2G=
@@ -297,9 +297,9 @@ input_fuel_PP[4]=
 input_fuel_Transport[1]=
 38.33646772
 input_fuel_Transport[2]=
-0.0
+180.849039525
 input_fuel_Transport[3]=
-0.0
+5.158225449750001
 input_fuel_Transport[4]=
 0
 input_fuel_Transport[6]=
@@ -337,9 +337,9 @@ input_fuel_Households[1]=
 input_fuel_Households[2]=
 0.0
 input_fuel_Households[3]=
-60.12488366482962
+171.0381202488678
 input_fuel_Households[4]=
-23.9557693773088
+35.9336540659632
 input_HH_coalboiler_eff=
 0.877258133065603
 input_HH_oilboiler_eff=
@@ -371,7 +371,7 @@ input_HH_EB_solar=
 input_HH_BioCHP_heat=
 0
 input_HH_HP_heat=
-65.71002753642964
+35.21949105971093
 input_HH_EB_heat=
 0.0
 input_HH_H2CHP_eff_el=
@@ -401,13 +401,13 @@ input_HH_BioCHP_CapLimit=
 input_HH_HP_CapLimit=
 1
 input_fuel_CSHP[1]=
-0.0
+0
 input_fuel_CSHP[2]=
-0.0
+0
 input_fuel_CSHP[3]=
-0.0
+337.0661749
 input_fuel_CSHP[4]=
-13.855710735999999
+16.30083616
 input_fuel_Various[1]=
 0
 input_fuel_Various[2]=
@@ -545,7 +545,7 @@ input_H2storage_trans_cap=
 input_H2storage_CHPindv_cap=
 0
 input_storage_pump_cap=
-630
+470
 input_CAES_fuel_ratio=
 0
 TS_input[1]=
@@ -901,7 +901,7 @@ input_Handling_Transp[5]=
 input_Handling_Transp[1]=
 0.482204425798863
 input_fuel_Transport[5]=
-0.0
+72.15961903499999
 input_Period_Various7=
 0
 input_FOM_Various7=
@@ -1119,7 +1119,7 @@ Input_V2GRegulation=
 input_km_LPG=
 1.5
 input_fuel_Transport[9]=
-0.0
+9.8122404675
 input_pp_cap_minimum=
 0
 Input_Button_IndvHPStorage=
@@ -1735,7 +1735,7 @@ Wave Power
 NameRES7=
 CSP Solar Power
 input_RES5_capacity=
-113000
+31000
 input_RES5_factor=
 -0.19
 input_RES6_capacity=
@@ -2001,15 +2001,15 @@ Input_Period_NH3=
 Input_FOM_NH3=
 0
 input_cap_pump_el2=
-5000
+24000
 input_eff_pump_el2=
 0.8
 input_cap_turbine_el2=
-120000
+16000
 input_eff_turbine_el2=
 0.58
 input_storage_pump_cap2=
-2800
+360
 input_Inv_pump2=
 0.3
 input_Period_pump2=
