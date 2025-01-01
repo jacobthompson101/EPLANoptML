@@ -16,3 +16,6 @@ big_*
 # Ignore EnergyPLAN software install path (seemed to run better within the directory and via commandline vs Jupyter notebook)
 ZipEnergyPLAN163
 input_folder/old
+
+# ignore pycache
+__pycache__
